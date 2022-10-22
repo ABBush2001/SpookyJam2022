@@ -53,6 +53,15 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse"",
+                    ""type"": ""Button"",
+                    ""id"": ""39db2c25-3536-4874-bc47-a06bf9337518"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -110,6 +119,17 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                     ""action"": ""Submit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""41cffc0d-b166-4b22-aad1-9de2ddfaf1fc"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -121,6 +141,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         m_Walking_Move = m_Walking.FindAction("Move", throwIfNotFound: true);
         m_Walking_Interact = m_Walking.FindAction("Interact", throwIfNotFound: true);
         m_Walking_Submit = m_Walking.FindAction("Submit", throwIfNotFound: true);
+        m_Walking_Mouse = m_Walking.FindAction("Mouse", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,6 +204,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
     private readonly InputAction m_Walking_Move;
     private readonly InputAction m_Walking_Interact;
     private readonly InputAction m_Walking_Submit;
+    private readonly InputAction m_Walking_Mouse;
     public struct WalkingActions
     {
         private @InputActions m_Wrapper;
@@ -190,6 +212,7 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Walking_Move;
         public InputAction @Interact => m_Wrapper.m_Walking_Interact;
         public InputAction @Submit => m_Wrapper.m_Walking_Submit;
+        public InputAction @Mouse => m_Wrapper.m_Walking_Mouse;
         public InputActionMap Get() { return m_Wrapper.m_Walking; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -208,6 +231,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Submit.started -= m_Wrapper.m_WalkingActionsCallbackInterface.OnSubmit;
                 @Submit.performed -= m_Wrapper.m_WalkingActionsCallbackInterface.OnSubmit;
                 @Submit.canceled -= m_Wrapper.m_WalkingActionsCallbackInterface.OnSubmit;
+                @Mouse.started -= m_Wrapper.m_WalkingActionsCallbackInterface.OnMouse;
+                @Mouse.performed -= m_Wrapper.m_WalkingActionsCallbackInterface.OnMouse;
+                @Mouse.canceled -= m_Wrapper.m_WalkingActionsCallbackInterface.OnMouse;
             }
             m_Wrapper.m_WalkingActionsCallbackInterface = instance;
             if (instance != null)
@@ -221,6 +247,9 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
                 @Submit.started += instance.OnSubmit;
                 @Submit.performed += instance.OnSubmit;
                 @Submit.canceled += instance.OnSubmit;
+                @Mouse.started += instance.OnMouse;
+                @Mouse.performed += instance.OnMouse;
+                @Mouse.canceled += instance.OnMouse;
             }
         }
     }
@@ -230,5 +259,6 @@ public partial class @InputActions : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnSubmit(InputAction.CallbackContext context);
+        void OnMouse(InputAction.CallbackContext context);
     }
 }

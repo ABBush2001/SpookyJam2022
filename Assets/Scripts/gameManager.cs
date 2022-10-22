@@ -6,6 +6,8 @@ public class gameManager : MonoBehaviour
 {
     public GameObject pipeHolder;
     public GameObject[] Pipes;
+    public bool miniGameCompleted = false;
+    public GameObject pipMiniGame;
 
     public int correctedPipes = 0;
 
@@ -31,6 +33,9 @@ public class gameManager : MonoBehaviour
         if(correctedPipes == totalPipes)
         {
             Debug.Log("You win!");
+            miniGameCompleted = true;
+            pipMiniGame.SetActive(false);
+            GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
         }
     }
 

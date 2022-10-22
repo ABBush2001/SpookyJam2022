@@ -7,7 +7,10 @@ public class BoatTrigger : MonoBehaviour
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
 
+    public GameObject pipMiniGame;
+
     private bool playerInRange;
+    public gameManager pipManager;
 
     private void Awake()
     {
@@ -23,6 +26,14 @@ public class BoatTrigger : MonoBehaviour
             if (InputManager.GetInstance().GetInteractPressed())
             {
                 Debug.Log("Boat button pressed!");
+                if(pipManager.miniGameCompleted){
+                    pipMiniGame.SetActive(true);
+                    GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 2.5f;
+                }
+                else{
+                    //continue level
+                }
+                
             }
         }
         else
