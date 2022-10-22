@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -36,6 +37,13 @@ public class gameManager : MonoBehaviour
             miniGameCompleted = true;
             pipMiniGame.SetActive(false);
             GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
+            
+            GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
+            miniGameCompleted = false;
+            if (SceneManager.GetActiveScene().name == "SampleScene")
+            {
+                StartCoroutine(changeScenes());
+            }
         }
     }
 
@@ -47,5 +55,11 @@ public class gameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    IEnumerator changeScenes()
+    {
+        yield return new WaitForSeconds(5);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(1);
     }
 }
