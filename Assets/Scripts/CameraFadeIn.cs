@@ -19,6 +19,11 @@ public class CameraFadeIn : MonoBehaviour
 
     private void Start()
     {
+        if (fadein == false)
+        {
+            fadein = true;
+        }
+
         if (startFadedOut)
         {
             alpha = 1f;

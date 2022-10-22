@@ -38,7 +38,7 @@ public class BoatTrigger : MonoBehaviour
                     GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
                 if(SceneManager.GetActiveScene().name == "SampleScene")
                 {
-                    //StartCoroutine(changeScenes());
+                    StartCoroutine(changeScenes());
                 }
                 }
                 
@@ -64,5 +64,11 @@ public class BoatTrigger : MonoBehaviour
         {
             playerInRange = false;
         }
+    }
+
+    IEnumerator changeScenes()
+    {
+        yield return new WaitForSeconds(5);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(1);
     }
 }
