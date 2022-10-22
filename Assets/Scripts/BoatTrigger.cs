@@ -26,7 +26,7 @@ public class BoatTrigger : MonoBehaviour
             if (InputManager.GetInstance().GetInteractPressed())
             {
                 Debug.Log("Boat button pressed!");
-                if(pipManager.miniGameCompleted){
+                if(pipManager.miniGameCompleted == false){
                     pipMiniGame.SetActive(true);
                     GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 2.5f;
                 }
