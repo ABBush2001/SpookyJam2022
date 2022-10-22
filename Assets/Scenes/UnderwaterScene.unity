@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 385523842}
   - component: {fileID: 385523841}
   - component: {fileID: 385523843}
+  - component: {fileID: 385523844}
   m_Layer: 0
   m_Name: Trigger4
   m_TagString: t4
@@ -234,6 +235,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &385523844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385523840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff9bfde65bd624488be34494a2e43dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &575278137
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +528,7 @@ GameObject:
   - component: {fileID: 794135024}
   - component: {fileID: 794135023}
   - component: {fileID: 794135025}
+  - component: {fileID: 794135026}
   m_Layer: 0
   m_Name: Trigger2
   m_TagString: t2
@@ -615,6 +629,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &794135026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794135022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff9bfde65bd624488be34494a2e43dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &928912500
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +652,7 @@ GameObject:
   - component: {fileID: 928912502}
   - component: {fileID: 928912501}
   - component: {fileID: 928912503}
+  - component: {fileID: 928912504}
   m_Layer: 0
   m_Name: Trigger3
   m_TagString: t3
@@ -726,6 +753,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &928912504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928912500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff9bfde65bd624488be34494a2e43dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1127018650
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +776,7 @@ GameObject:
   - component: {fileID: 1127018652}
   - component: {fileID: 1127018651}
   - component: {fileID: 1127018653}
+  - component: {fileID: 1127018654}
   m_Layer: 0
   m_Name: Trigger5
   m_TagString: t5
@@ -837,6 +877,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1127018654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127018650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff9bfde65bd624488be34494a2e43dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1183674572
 GameObject:
   m_ObjectHideFlags: 0

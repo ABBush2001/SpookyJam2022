@@ -11,5 +11,9 @@ public class ComponentManager : MonoBehaviour
     {
         control = this;                          // linking the self-reference
         DontDestroyOnLoad(transform.gameObject); // set to dont destroy
+        /*if(this.name == "Submarine")
+        {
+            GameObject.Find
+        }*/
     }
 }

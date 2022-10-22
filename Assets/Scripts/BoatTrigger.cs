@@ -17,6 +17,11 @@ public class BoatTrigger : MonoBehaviour
 
     private void Awake()
     {
+        if(pipManager.miniGameCompleted)
+        {
+            pipManager.miniGameCompleted = false;
+        }
+
         playerInRange = false;
         visualCue.SetActive(false);
     }
