@@ -30,7 +30,7 @@ public class gameManager : MonoBehaviour
 
     public void correctMove(){
         correctedPipes += 1;
-
+        Debug.Log("correct spot!");
         if(correctedPipes == totalPipes)
         {
             Debug.Log("You win!");
@@ -49,6 +49,7 @@ public class gameManager : MonoBehaviour
 
     public void wrongMove(){
         correctedPipes -= 1;
+        Debug.Log("Wrong Spot");
     }
 
     // Update is called once per frame

@@ -30,6 +30,7 @@ public class BoatTrigger : MonoBehaviour
             {
                 Debug.Log("Boat button pressed!");
                 if(pipManager.miniGameCompleted == false){
+                    Debug.Log("Start minigame");
                     pipMiniGame.SetActive(true);
                     GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 2.5f;
                 }
