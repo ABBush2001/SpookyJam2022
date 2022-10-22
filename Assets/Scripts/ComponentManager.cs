@@ -1,16 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ComponentManager : MonoBehaviour
 {
-    public static ComponentManager control;      // cheeky self-reference
-    //public Texture2D texture;                    // our component reference
+    private static ComponentManager instance;
 
     void Awake()
     {
-        control = this;                          // linking the self-reference
-        DontDestroyOnLoad(transform.gameObject); // set to dont destroy
+        DontDestroyOnLoad(transform.gameObject);
     }
 }
