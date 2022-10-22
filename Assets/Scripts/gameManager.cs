@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
+    public GameObject ReturnTrigger;
+
     public GameObject pipeHolder;
     public GameObject[] Pipes;
     public bool miniGameCompleted = false;
@@ -38,11 +40,16 @@ public class gameManager : MonoBehaviour
             pipMiniGame.SetActive(false);
             GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
             
-            GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
+            
             miniGameCompleted = false;
             if (SceneManager.GetActiveScene().name == "SampleScene")
             {
+                GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
                 StartCoroutine(changeScenes());
+            }
+            if(SceneManager.GetActiveScene().name == "ShipInterior")
+            {
+                ReturnTrigger.SetActive(true);
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ComponentManager : MonoBehaviour
 {
@@ -11,9 +12,5 @@ public class ComponentManager : MonoBehaviour
     {
         control = this;                          // linking the self-reference
         DontDestroyOnLoad(transform.gameObject); // set to dont destroy
-        /*if(this.name == "Submarine")
-        {
-            GameObject.Find
-        }*/
     }
 }
