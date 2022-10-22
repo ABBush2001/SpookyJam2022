@@ -33,7 +33,14 @@ public class BoatTrigger : MonoBehaviour
                     pipMiniGame.SetActive(true);
                     GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 2.5f;
                 }
-                
+                else{
+                    //continue level
+                    GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
+                if(SceneManager.GetActiveScene().name == "SampleScene")
+                {
+                    StartCoroutine(changeScenes());
+                }
+                }
                 
             }
         }

@@ -13,6 +13,7 @@ public class HumanLandInput : MonoBehaviour
 
     bool isFacingRight = true;
     PlayerInput playerinput;
+    public Animator animator;
 
     void Start()
     {
@@ -32,6 +33,8 @@ public class HumanLandInput : MonoBehaviour
     void Movement()
     {
         transform.Translate(Mathf.Abs(playerinput.actions["Move"].ReadValue<float>()) * speed * Time.deltaTime, 0, 0);
+
+        animator.SetFloat("Speed", Mathf.Abs(playerinput.actions["Move"].ReadValue<float>()) * speed * Time.deltaTime, 0, 0);
 
         if(playerinput.actions["Move"].ReadValue<float>() > 0 && !isFacingRight)
         {
