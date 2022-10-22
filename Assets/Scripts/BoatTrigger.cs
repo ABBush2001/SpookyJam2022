@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BoatTrigger : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class BoatTrigger : MonoBehaviour
 
     private bool playerInRange;
     public gameManager pipManager;
+
+    public bool BoatTaskDone = false;
 
     private void Awake()
     {
@@ -33,7 +36,11 @@ public class BoatTrigger : MonoBehaviour
                 else{
                     //continue level
                 }
-                
+                GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
+                if(SceneManager.GetActiveScene().name == "SampleScene")
+                {
+                    StartCoroutine(changeScenes());
+                }
             }
         }
         else
@@ -56,5 +63,11 @@ public class BoatTrigger : MonoBehaviour
         {
             playerInRange = false;
         }
+    }
+
+    IEnumerator changeScenes()
+    {
+        yield return new WaitForSeconds(5);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(1);
     }
 }
