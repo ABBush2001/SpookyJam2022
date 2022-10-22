@@ -55,3 +55,6 @@ TagManager:
   - name: pipe
     uniqueID: 2921702435
     locked: 0
+  - name: foreground
+    uniqueID: 4074794967
+    locked: 0
