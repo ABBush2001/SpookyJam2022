@@ -15,6 +15,7 @@ using UnityEngine.InputSystem;
 public class InputManager : MonoBehaviour
 {
     private Vector2 moveDirection = Vector2.zero;
+    private Vector2 subDirection = Vector2.zero;
     private bool interactPressed = false;
     private bool submitPressed = false;
 
@@ -70,9 +71,26 @@ public class InputManager : MonoBehaviour
         }
     }
 
+    public void SubPressed(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            subDirection = context.ReadValue<Vector2>();
+        }
+        else if (context.canceled)
+        {
+            subDirection = context.ReadValue<Vector2>();
+        }
+    }
+
     public Vector2 GetMoveDirection()
     {
         return moveDirection;
+    }
+
+    public Vector2 GetSubDirection()
+    {
+        return subDirection;
     }
 
     // for any of the below 'Get' methods, if we're getting it then we're also using it,

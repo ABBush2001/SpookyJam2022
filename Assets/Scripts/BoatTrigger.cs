@@ -29,18 +29,12 @@ public class BoatTrigger : MonoBehaviour
             if (InputManager.GetInstance().GetInteractPressed())
             {
                 Debug.Log("Boat button pressed!");
-                if(pipManager.miniGameCompleted){
+                if(pipManager.miniGameCompleted == false){
                     pipMiniGame.SetActive(true);
                     GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 2.5f;
                 }
-                else{
-                    //continue level
-                }
-                GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
-                if(SceneManager.GetActiveScene().name == "SampleScene")
-                {
-                    StartCoroutine(changeScenes());
-                }
+                
+                
             }
         }
         else
@@ -63,11 +57,5 @@ public class BoatTrigger : MonoBehaviour
         {
             playerInRange = false;
         }
-    }
-
-    IEnumerator changeScenes()
-    {
-        yield return new WaitForSeconds(5);
-        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(1);
     }
 }

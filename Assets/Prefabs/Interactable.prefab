@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3576136295876411793}
   - component: {fileID: 3576136295876411822}
   m_Layer: 0
-  m_Name: Boat
+  m_Name: Interactable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
