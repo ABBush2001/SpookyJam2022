@@ -8,7 +8,10 @@ public class BoatTrigger : MonoBehaviour
     [Header("Visual Cue")]
     [SerializeField] private GameObject visualCue;
 
+    public GameObject pipMiniGame;
+
     private bool playerInRange;
+    public gameManager pipManager;
 
     public bool BoatTaskDone = false;
 
@@ -26,6 +29,13 @@ public class BoatTrigger : MonoBehaviour
             if (InputManager.GetInstance().GetInteractPressed())
             {
                 Debug.Log("Boat button pressed!");
+                if(pipManager.miniGameCompleted){
+                    pipMiniGame.SetActive(true);
+                    GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 2.5f;
+                }
+                else{
+                    //continue level
+                }
                 GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
                 if(SceneManager.GetActiveScene().name == "SampleScene")
                 {
