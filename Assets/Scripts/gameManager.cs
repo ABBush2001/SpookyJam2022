@@ -38,17 +38,19 @@ public class gameManager : MonoBehaviour
             Debug.Log("You win!");
             miniGameCompleted = true;
             pipMiniGame.SetActive(false);
-            GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
+            
             
             
             miniGameCompleted = false;
             if (SceneManager.GetActiveScene().name == "SampleScene")
             {
+                GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
                 GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
                 StartCoroutine(changeScenes());
             }
             if(SceneManager.GetActiveScene().name == "ShipInterior")
             {
+                GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 9f;
                 ReturnTrigger.SetActive(true);
             }
         }
