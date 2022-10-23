@@ -55,6 +55,15 @@ TagManager:
   - name: pipe
     uniqueID: 2921702435
     locked: 0
+  - name: middle
+    uniqueID: 2693268455
+    locked: 0
   - name: foreground
     uniqueID: 4074794967
+    locked: 0
+  - name: minigameGrid
+    uniqueID: 3486806013
+    locked: 0
+  - name: minigameTube
+    uniqueID: 251217537
     locked: 0

@@ -41,7 +41,7 @@ public class gameManager : MonoBehaviour
             
             
             
-            miniGameCompleted = false;
+            //miniGameCompleted = false;
             if (SceneManager.GetActiveScene().name == "SampleScene")
             {
                 GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
@@ -50,6 +50,7 @@ public class gameManager : MonoBehaviour
             }
             if(SceneManager.GetActiveScene().name == "ShipInterior")
             {
+                pipMiniGame.SetActive(false);
                 GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 9f;
                 ReturnTrigger.SetActive(true);
             }
