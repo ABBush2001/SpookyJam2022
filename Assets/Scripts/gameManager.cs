@@ -58,6 +58,10 @@ public class gameManager : MonoBehaviour
             if(SceneManager.GetActiveScene().name == "ShipInterior")
             {
                 GameObject.Find("Button").GetComponent<AudioSource>().Play();
+                if(GameObject.Find("SceneManager").GetComponent<sceneStart>().isEnd)
+                {
+                    GameObject.Find("ShipNoise").GetComponent<AudioSource>().Stop();
+                }
                 pipMiniGame.SetActive(false);
                 GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
 

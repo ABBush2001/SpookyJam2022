@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShipInterior.unity
     guid: 6556e40e7d51fd0449c844e8ed0feb37
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 172643f01f5aa1a45894d832ae49c857
   m_configObjects: {}

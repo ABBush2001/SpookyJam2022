@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ending : MonoBehaviour
 {
@@ -29,6 +30,9 @@ public class ending : MonoBehaviour
             {
                 //end game
                 creature.SetActive(true);
+                GameObject.Find("Jumpscare").GetComponent<AudioSource>().Play();
+                
+                StartCoroutine(LoadCredits());
             }
         }
         else
@@ -51,5 +55,14 @@ public class ending : MonoBehaviour
         {
             playerInRange = false;
         }
+    }
+
+    IEnumerator LoadCredits()
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().speedScale = 40;
+        GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
+        yield return new WaitForSeconds(5);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(4);
     }
 }
