@@ -8,11 +8,13 @@ public class sceneStart : MonoBehaviour
 
     public float pos;
     public GameObject light;
+    public GameObject gLight;
     public GameObject creature1;
     public GameObject creature2;
     public GameObject creature3;
     public GameObject creature4;
     public GameObject creature5;
+    public bool isEnd;
 
     public TextAsset inkJson1;
     public TextAsset inkJson2;
@@ -58,7 +60,10 @@ public class sceneStart : MonoBehaviour
             Debug.Log("fifth scene");
             GameObject.Find("NPC").transform.GetChild(1).GetComponent<DialogueTrigger>().SetInkJson(inkJson5);
             light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .1f;
+            light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .2f;
+            gLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .02f;
             light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color.red;
+            isEnd = true;
         }
     }
 

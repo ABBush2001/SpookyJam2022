@@ -55,8 +55,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "negative",
-                    "id": "01a3abf8-d02a-4f83-be7d-54ce9c014e85",
+                    "name": "Negative",
+                    "id": "272f511e-bd6b-4d6e-a0df-f07e9c23ea6e",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
@@ -66,8 +66,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "positive",
-                    "id": "49608044-0358-49f3-bf66-b353fef429a5",
+                    "name": "Positive",
+                    "id": "c6cc7f26-9b5a-4bbe-a388-781c09847043",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
