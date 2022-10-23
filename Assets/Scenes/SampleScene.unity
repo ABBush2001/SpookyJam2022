@@ -951,6 +951,9 @@ MonoBehaviour:
   miniGameCompleted: 0
   pipMiniGame: {fileID: 1808537523}
   correctedPipes: 0
+  endScene: {fileID: 0}
+  light: {fileID: 0}
+  gLight: {fileID: 0}
   totalPipes: 0
 --- !u!1001 &467333224
 PrefabInstance:
@@ -4153,9 +4156,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 906140671095128430, guid: 573186628a18217439615e4da892a102, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0882fde0cd49e9f4eb3deb127e3f60cc, type: 3}
     - target: {fileID: 906140671095128431, guid: 573186628a18217439615e4da892a102, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 906140671203205790, guid: 573186628a18217439615e4da892a102, type: 3}
       propertyPath: m_RootOrder
@@ -4346,6 +4353,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.419
       objectReference: {fileID: 0}
+    - target: {fileID: 3576136296109344603, guid: 7fb0a6e4461f3524cb5fe8282a2dbc7f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0882fde0cd49e9f4eb3deb127e3f60cc, type: 3}
     - target: {fileID: 3576136296443241748, guid: 7fb0a6e4461f3524cb5fe8282a2dbc7f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.028
