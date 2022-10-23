@@ -14,6 +14,12 @@ public class gameManager : MonoBehaviour
 
     public int correctedPipes = 0;
 
+    private bool ending;
+    public GameObject endScene;
+
+    public GameObject light;
+    public GameObject gLight;
+
     
     public int totalPipes = 0;
     // Start is called before the first frame update
@@ -51,8 +57,15 @@ public class gameManager : MonoBehaviour
             if(SceneManager.GetActiveScene().name == "ShipInterior")
             {
                 pipMiniGame.SetActive(false);
-                GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 9f;
+                GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 6f;
                 ReturnTrigger.SetActive(true);
+                ending = GameObject.Find("SceneManager").GetComponent<sceneStart>().isEnd;
+                if(ending){
+                    endScene.SetActive(true);
+                    light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .8f;
+                    gLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .01f;
+                    light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color.red;
+                }
             }
         }
     }

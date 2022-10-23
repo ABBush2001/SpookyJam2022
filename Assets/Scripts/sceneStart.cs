@@ -8,11 +8,13 @@ public class sceneStart : MonoBehaviour
 
     public float pos;
     public GameObject light;
+    public GameObject gLight;
     public GameObject creature1;
     public GameObject creature2;
     public GameObject creature3;
     public GameObject creature4;
     public GameObject creature5;
+    public bool isEnd;
 
     //GameObject es = GameObject.Find("EventSystem").GetComponent<PosTracker>();
     void Start()
@@ -46,8 +48,10 @@ public class sceneStart : MonoBehaviour
         else{
             //fifth scene
             Debug.Log("fifth scene");
-            light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .1f;
+            light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .2f;
+            gLight.GetComponent<UnityEngine.Rendering.Universal.Light2D>().intensity = .02f;
             light.GetComponent<UnityEngine.Rendering.Universal.Light2D>().color = Color.red;
+            isEnd = true;
         }
     }
 

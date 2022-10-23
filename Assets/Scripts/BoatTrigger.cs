@@ -15,6 +15,9 @@ public class BoatTrigger : MonoBehaviour
 
     public bool BoatTaskDone = false;
 
+    private bool ending;
+    public GameObject endScene;
+
     private void Awake()
     {
         if(pipManager.miniGameCompleted)
@@ -46,9 +49,11 @@ public class BoatTrigger : MonoBehaviour
                         StartCoroutine(changeScenes());
                     }
                     if(SceneManager.GetActiveScene().name == "ShipInterior")
-                    {
-
+                    {   
+                        
                     }
+
+                    
                 }
                 
             }
