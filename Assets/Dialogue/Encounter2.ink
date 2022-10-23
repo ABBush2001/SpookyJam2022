@@ -1,0 +1,3 @@
+At the sub's window this time you see a male adult Sperm Whale. At first you gaze in awe at the majestic creature, before wondering how such a massive beast hasn't destroyed the vessel through the sheer power of it kicking up ocean currents.
+Upon further inspection, you realize that its, in fact, not moving at all. Are you so sure the whale is alive in the first place? But that raises a bigger question...
+What could have killed a whale like that?

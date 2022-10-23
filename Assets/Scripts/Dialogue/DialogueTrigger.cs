@@ -49,4 +49,9 @@ public class DialogueTrigger : MonoBehaviour
             playerInRange = false;
         }
     }
+
+    public void SetInkJson(TextAsset ink)
+    {
+        inkJson = ink;
+    }
 }

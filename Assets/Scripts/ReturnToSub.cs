@@ -19,6 +19,6 @@ public class ReturnToSub : MonoBehaviour
     IEnumerator changeScenes()
     {
         yield return new WaitForSeconds(5);
-        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(1);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(2);
     }
 }

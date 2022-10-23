@@ -1,0 +1,1 @@
+A plethora of ocean creatures are visible through the submarine's massive window. Looking out, you find yourself at ease. Clownfish, Squid, Tuna - the creatures of the ocean are so beautiful! How could anyone bring themselves to hate - even fear - such lovely creatures?

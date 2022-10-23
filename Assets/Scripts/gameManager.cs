@@ -44,14 +44,16 @@ public class gameManager : MonoBehaviour
             //miniGameCompleted = false;
             if (SceneManager.GetActiveScene().name == "SampleScene")
             {
+                GameObject.Find("Sub Noise").GetComponent<AudioSource>().Play();
                 GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
                 GameObject.Find("Main Camera").GetComponent<CameraFadeOut>().fadeOut = true;
                 StartCoroutine(changeScenes());
             }
             if(SceneManager.GetActiveScene().name == "ShipInterior")
             {
+                GameObject.Find("Button").GetComponent<AudioSource>().Play();
                 pipMiniGame.SetActive(false);
-                GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 9f;
+                GameObject.Find("Main Camera").GetComponent<CameraFollow>().yOffset = 1f;
                 ReturnTrigger.SetActive(true);
             }
         }
@@ -70,6 +72,6 @@ public class gameManager : MonoBehaviour
     IEnumerator changeScenes()
     {
         yield return new WaitForSeconds(5);
-        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(1);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(2);
     }
 }

@@ -1,0 +1,3 @@
+A Bigfin Squid. These alien-like anomalies are rarely seen by human eyes - in fact, you might be the first. Not that you're happy about it - its long tendrils extends countless human body lengths, its featureless, gelatinous head looks so foreign it sends a shiver down your spine.
+But what really bothers you isn't this squid - no, this dread has been eating away at you for some time now - this feeling like your being watched. Whatever is lurking in these depths, it certainly isn't your friend.
+And worst of all, it seems that its found you first.

@@ -57,6 +57,6 @@ public class TriggerChecker : MonoBehaviour
     IEnumerator waitForFade(Collider2D collision)
     {
         yield return new WaitForSeconds(5);
-        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(2);
+        GameObject.Find("SceneManager").GetComponent<LoadNextScene>().LoadScene(3);
     }
 }
