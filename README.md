@@ -4,4 +4,4 @@ This Unity game, titled *The Descent*. was made as a submission for the [Spooky 
 
 ## Resources Used
 
-Built in Unity 2021.3.2f1, this game utilizes the Unity Input system for player movement. Dialog was done used the narrative scripting language *Ink*. 
+Built in Unity 2021.3.2f1, this game utilizes the Unity Input system for player movement. Dialog was done using the narrative scripting language *Ink*. 
