@@ -1,6 +1,6 @@
 # SpookyJam2022
 
-This Unity game, titled *The Descent*. was made as a submission for the [Spooky 2D Jam 2022](https://itch.io/jam/spooky-2d-jam-2022) 48 hour Game Jam. Playable in a web browser, you can find the link to play this title [here.](https://nipshot.itch.io/the-descent)
+This Unity game, titled *The Descent*, was made as a submission for the [Spooky 2D Jam 2022](https://itch.io/jam/spooky-2d-jam-2022) 48 hour Game Jam. Playable in a web browser, you can find the link to play this title [here.](https://nipshot.itch.io/the-descent)
 
 ## Resources Used
 
